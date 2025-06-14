@@ -3,18 +3,14 @@ int main(){
 	int n;
 	printf("nhap n:");
 	scanf("%d",&n);
-	int i=1,s=0;
+	if(n<0)n=-1*n;	
 	
-	if(n<=0)printf("n la so nguyen duong");
-	else{
-	while(i<n){
-		if(n%i==0){
-		s=s+i;
-		}
-			i++;
-
-	}
-	if(s==n)printf("%d la so hoan hao",n);
-	else printf("%d khong phai la so hoan hao",n);
-}
+	int c=n,x,dv,s=0;
+	
+	for(int i=0;i<n;i++){
+		dv=c%10;
+		s=s+dv;
+		x=c/10;
+		c=x;
+	}printf("tong cac so %d la: %d",n,s);
 }

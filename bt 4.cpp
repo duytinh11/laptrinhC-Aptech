@@ -4,13 +4,12 @@ int main(){
 	do{
 	printf("nhap n:");
 	scanf("%d",&n);
-	if(n<=0)printf("vui long nhap so duong\n");
+	if(n<=0)printf("vui long nhap so duong");
 	}while(n<=0);	
-	int c=n,x,dv,s=0;
+	int c=n,x;
 	for(int i=1;i<=n;i++){
-		dv=c%10;
 		x=c/10;
 		c=x;
-	if(s<=dv) s=dv;
-	}printf("so lon nhat %d la: %d",n,s);
+		if(x<10) break;
+	}printf("so dau tien cua %n la: %d",n,x);
 }

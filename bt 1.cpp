@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main(){
 	int n;
-	printf("nhap n:");
-	scanf("%d",&n);
 	
-	int i=n-1;
-if (i<=6) printf("nhap n>6");
-else{
-
+	do{
+	printf("nhap n:\n");
+	scanf("%d",&n);
+	if(n<=0)printf("nhap n>0\n");
+	}while(n<=0);
+	
+	int i=1,s=0;
 	while(i<n){
-		if(i%6==0) printf("%d,",i);
-		i--;
-	}	
-	printf("so le nho hon %d la:%d",n,i);
-}
+		if(n%i==0)s=s+i;
+		i++;
+	}
+	printf("tong uoc cua %d la: %d",n,s);
 }
